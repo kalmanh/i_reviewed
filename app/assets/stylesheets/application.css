@@ -1,0 +1,32 @@
+/*
+ *= require_tree .
+ *= require_self
+ */
+
+.book {
+  padding-top: 20px;
+}
+
+.book_link {
+  font: bold 15px arial, sans-serif;
+}
+
+#notice {
+  color: green;
+}
+
+#alert {
+  color: red;
+}
+
+#notes {
+  padding-left: 15px;
+}
+
+.note {
+  background: lightgray;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid;
+  border-radius: 15px;
+}
