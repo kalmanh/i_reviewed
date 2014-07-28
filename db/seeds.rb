@@ -9,6 +9,8 @@ Book.create! [
   { name: "Ember.js in Action", author: "Joachim Haagen Skeie" } 
 ]
 
+200.times { |index| Book.create! name: "Name#{index}", author: "Author#{index}" }
+
 mine = Book.find_by author: "Me"
 mine.notes.create! [
   { title: "Fascinating", note: "This book is simply amazing!"},
