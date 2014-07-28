@@ -1,3 +1,4 @@
+Reviewer.destroy_all
 Book.destroy_all
 
 Book.create! [
@@ -13,3 +14,13 @@ mine.notes.create! [
   { title: "Fascinating", note: "This book is simply amazing!"},
   { title: "Wow", note: "This guy is so full of himself... :)"}
 ]
+
+reviewers = Reviewer.create! [
+  { name: "Joe", password: "abc123" },
+  { name: "Jim", password: "123abc" }
+]
+
+Book.all.each do |book|
+  book.reviewer = reviewers.sample
+  book.save!
+end
